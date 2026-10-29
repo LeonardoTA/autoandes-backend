@@ -51,7 +51,8 @@ class SeguridadOracleTest {
   String token=login("admin").token();int inicio=token.lastIndexOf('.')+1;
   String alterado=token.substring(0,inicio)+(token.charAt(inicio)=='A'?'B':'A')+token.substring(inicio+1);
   String vencido=new JwtService(secret,3600,Clock.offset(clock,Duration.ofHours(-2))).generar("admin");
-  String ajeno=new JwtService("clave-de-prueba-independiente-para-firma-invalida-12345",3600,clock).generar("admin");
+  String claveAjena=Base64.getEncoder().encodeToString("clave-de-prueba-independiente-para-firma-invalida-12345".getBytes(java.nio.charset.StandardCharsets.UTF_8));
+  String ajeno=new JwtService(claveAjena,3600,clock).generar("admin");
   for(String invalido:List.of(alterado,vencido,ajeno,"no-es-jwt")) error(mvc.perform(get("/api/v1/clientes").header("Authorization","Bearer "+invalido)),401,"/api/v1/clientes",false);
   error(mvc.perform(get("/api/v1/clientes").header("Authorization","Basic abc")),401,"/api/v1/clientes",false);
  }

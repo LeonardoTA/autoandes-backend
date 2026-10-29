@@ -23,7 +23,8 @@ public class SecurityConfig {
     private final RestAccessDeniedHandler denied;
 
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http, CorsConfigurationSource cors) throws Exception {
+    SecurityFilterChain securityFilterChain(HttpSecurity http,
+            @org.springframework.beans.factory.annotation.Qualifier("corsConfigurationSource") CorsConfigurationSource cors) throws Exception {
         return http.csrf(c -> c.disable()).cors(c -> c.disable())
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .requestCache(c -> c.disable()).formLogin(c -> c.disable()).httpBasic(c -> c.disable()).logout(c -> c.disable())
@@ -45,3 +46,4 @@ public class SecurityConfig {
                 .addFilterBefore(new JwtAuthenticationFilter(jwt, usuarios, entryPoint), UsernamePasswordAuthenticationFilter.class).build();
     }
 }
+
