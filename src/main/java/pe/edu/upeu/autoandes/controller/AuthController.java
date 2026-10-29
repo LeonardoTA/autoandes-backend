@@ -9,6 +9,7 @@ import pe.edu.upeu.autoandes.service.AuthService;
 @RestController @RequestMapping("/api/v1/auth") @RequiredArgsConstructor
 public class AuthController {
  private final AuthService service;
- @PostMapping("/login") public LoginResponseDTO login(@Valid @RequestBody LoginRequestDTO dto) {return service.login(dto);}
+ @PostMapping("/login") @io.swagger.v3.oas.annotations.security.SecurityRequirements
+ public LoginResponseDTO login(@Valid @RequestBody LoginRequestDTO dto) {return service.login(dto);}
  @GetMapping("/me") public UsuarioResponseDTO actual(Principal principal) {return service.actual(principal.getName());}
 }

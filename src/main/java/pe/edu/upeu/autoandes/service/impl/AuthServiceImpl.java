@@ -19,10 +19,14 @@ public class AuthServiceImpl implements AuthService {
  public LoginResponseDTO login(LoginRequestDTO d) {
   UsuarioPrincipal u;
   try {u=usuarios.loadUserByUsername(d.username());}
-  catch(UsernameNotFoundException ex) {encoder.matches(d.password(),DUMMY_HASH);throw new BadCredentialsException("Credenciales inválidas");}
-  boolean valido=encoder.matches(d.password(),u.getPassword());
+  catch(UsernameNotFoundException ex) {coincide(d.password(),DUMMY_HASH);throw new BadCredentialsException("Credenciales inválidas");}
+  boolean valido=coincide(d.password(),u.getPassword());
   if(!valido || !u.isEnabled()) throw new BadCredentialsException("Credenciales inválidas");
   log.info("Inicio de sesión exitoso");return mapper.login(u,jwt.generar(u.getUsername()),jwt.expiraEnSegundos());
  }
  public UsuarioResponseDTO actual(String username) {return mapper.respuesta(usuarios.loadUserByUsername(username));}
+ private boolean coincide(String password,String hash) {
+  try {return encoder.matches(password,hash);}
+  catch(IllegalArgumentException ex) {return false;}
+ }
 }
