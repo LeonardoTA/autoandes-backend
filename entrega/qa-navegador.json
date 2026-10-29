@@ -1,0 +1,94 @@
+{
+  "fecha": "2026-10-29T15:49:45.305Z",
+  "web": "http://localhost:4200",
+  "api": "http://localhost:8080/api/v1",
+  "total": 20,
+  "aprobadas": 20,
+  "fallidas": 0,
+  "orden": "OS-000010",
+  "placaPrueba": "NUI-102",
+  "casos": [
+    {
+      "caso": "Login navegador admin",
+      "correcto": true
+    },
+    {
+      "caso": "CRUD servicio: alta y buscador reactivo",
+      "correcto": true
+    },
+    {
+      "caso": "CRUD servicio: edición con código propio",
+      "correcto": true
+    },
+    {
+      "caso": "409 de servicio visible y formulario conservado",
+      "correcto": true
+    },
+    {
+      "caso": "CRUD vehículo: alta con clientes reales y nombre relacionado",
+      "correcto": true
+    },
+    {
+      "caso": "CRUD vehículo: edición con placa propia",
+      "correcto": true
+    },
+    {
+      "caso": "Login navegador asesor",
+      "correcto": true
+    },
+    {
+      "caso": "Orden: FormArray, total reactivo, sin repetidos y409 conserva líneas",
+      "correcto": true
+    },
+    {
+      "caso": "Orden registrada: número y total del servidor",
+      "correcto": true,
+      "detalle": "OS-000010"
+    },
+    {
+      "caso": "ASESOR no ve anulación",
+      "correcto": true
+    },
+    {
+      "caso": "403 real: ASESOR no consulta reporte",
+      "correcto": true
+    },
+    {
+      "caso": "Login navegador jefe",
+      "correcto": true
+    },
+    {
+      "caso": "URL manual sin permiso: guard deniega y conserva sesión",
+      "correcto": true
+    },
+    {
+      "caso": "Reporte real visible con JEFE_TALLER",
+      "correcto": true
+    },
+    {
+      "caso": "Anulación real desde interfaz",
+      "correcto": true
+    },
+    {
+      "caso": "JWT alterado: interceptor401 cierra y conserva returnUrl",
+      "correcto": true
+    },
+    {
+      "caso": "Login navegador admin",
+      "correcto": true
+    },
+    {
+      "caso": "Vencimiento guardado: cierre automático de sesión",
+      "correcto": true
+    },
+    {
+      "caso": "Sin errores JavaScript en navegador",
+      "correcto": true
+    },
+    {
+      "caso": "Limpieza servicio de prueba sin historial",
+      "correcto": true
+    }
+  ],
+  "erroresJavascript": []
+}

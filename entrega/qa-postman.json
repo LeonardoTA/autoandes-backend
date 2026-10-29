@@ -1,0 +1,399 @@
+{
+  "fecha": "2026-10-29T15:51:28.195Z",
+  "runner": "Newman 6.2.3 (Runner CLI oficial de Postman)",
+  "coleccion": "AutoAndes - Examen U2",
+  "descripcion": "Colección de pruebas automáticas de Postman para AutoAndes API v1.",
+  "estadisticas": {
+    "totalRequests": 34,
+    "failedRequests": 0,
+    "peticionesPrincipales": 30,
+    "peticionesAuxiliaresPrerequestYRollback": 4,
+    "totalAserciones": 50,
+    "asercionesAprobadas": 50,
+    "asercionesFallidas": 0
+  },
+  "duracionTotalMs": 4102,
+  "tiempoRespuestaPromedioMs": 41,
+  "casosEvaluados": [
+    {
+      "nombre": "200 Login admin",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Login asesor",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Login jefe",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Clientes",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Servicios",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Vehículos",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "201 Crear servicio: elegir código libre",
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 2
+    },
+    {
+      "nombre": "200 Leer creado",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Editar creado",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Baja creado",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "204 Eliminar creado sin historial",
+      "aserciones": [
+        {
+          "nombre": "HTTP 204",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "201 Crear vehículo sin historial",
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 2
+    },
+    {
+      "nombre": "200 Leer vehículo creado",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Editar vehículo con placa propia",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "204 Eliminar vehículo sin historial",
+      "aserciones": [
+        {
+          "nombre": "HTTP 204",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "400 Placa y año inválidos",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 400",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "404 Vehículo inexistente",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 404",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "409 Placa duplicada",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 409",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Consultar órdenes",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Detalle semilla",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "201 Registrar: afecta historial real de pruebas",
+      "aserciones": [
+        {
+          "nombre": "HTTP 201",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Reporte agrupado",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "200 Anular orden de prueba del día",
+      "aserciones": [
+        {
+          "nombre": "HTTP 200",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "400 Validación por campo",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 400",
+          "aprobada": true
+        },
+        {
+          "nombre": "Campos visibles",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "401 Sin token",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 401",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "401 Usuario inactivo",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 401",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "403 Asesor sin permiso de reporte",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 403",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "404 Servicio inexistente",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 404",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "409 Código duplicado",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 409",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 1
+    },
+    {
+      "nombre": "409 Tercer detalle inactivo: verificar rollback",
+      "aserciones": [
+        {
+          "nombre": "Error con formato común",
+          "aprobada": true
+        },
+        {
+          "nombre": "Sin campos fuera de validación",
+          "aprobada": true
+        },
+        {
+          "nombre": "Rollback: no dejó cabecera",
+          "aprobada": true
+        },
+        {
+          "nombre": "HTTP 409",
+          "aprobada": true
+        }
+      ],
+      "peticionesHttp": 3
+    }
+  ]
+}

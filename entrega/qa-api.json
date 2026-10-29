@@ -1,0 +1,815 @@
+{
+  "fecha": "2026-10-29T15:37:32.712Z",
+  "api": "http://localhost:8080/api/v1",
+  "total": 64,
+  "aprobadas": 64,
+  "fallidas": 0,
+  "casos": [
+    {
+      "caso": "Login admin",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Login asesor",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Login jefe",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Login rechazado admin",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.7739303",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Credenciales inválidas",
+        "ruta": "/api/v1/auth/login"
+      }
+    },
+    {
+      "caso": "Login rechazado no-existe",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.858365",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Credenciales inválidas",
+        "ruta": "/api/v1/auth/login"
+      }
+    },
+    {
+      "caso": "Login rechazado inactivo",
+      "metodo": "POST",
+      "ruta": "/auth/login",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.9404609",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Credenciales inválidas",
+        "ruta": "/api/v1/auth/login"
+      }
+    },
+    {
+      "caso": "Sin token /clientes",
+      "metodo": "GET",
+      "ruta": "/clientes",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.9524729",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/clientes"
+      }
+    },
+    {
+      "caso": "Sin token /servicios",
+      "metodo": "GET",
+      "ruta": "/servicios",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.9668866",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/servicios"
+      }
+    },
+    {
+      "caso": "Sin token /vehiculos",
+      "metodo": "GET",
+      "ruta": "/vehiculos",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.981123",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/vehiculos"
+      }
+    },
+    {
+      "caso": "Sin token /ordenes",
+      "metodo": "GET",
+      "ruta": "/ordenes",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:30.9967374",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Sin token /reportes/ingresos-por-servicio",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.0120053",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/reportes/ingresos-por-servicio"
+      }
+    },
+    {
+      "caso": "Sin token /auth/me",
+      "metodo": "GET",
+      "ruta": "/auth/me",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.0278009",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/auth/me"
+      }
+    },
+    {
+      "caso": "Firma alterada",
+      "metodo": "GET",
+      "ruta": "/auth/me",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.0690956",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/auth/me"
+      }
+    },
+    {
+      "caso": "JWT vencido con firma válida",
+      "metodo": "GET",
+      "ruta": "/auth/me",
+      "esperado": 401,
+      "obtenido": 401,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.0916556",
+        "status": 401,
+        "error": "Unauthorized",
+        "mensaje": "Se requiere autenticación válida",
+        "ruta": "/api/v1/auth/me"
+      }
+    },
+    {
+      "caso": "Identidad autenticada",
+      "metodo": "GET",
+      "ruta": "/auth/me",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "ASESOR no crea servicios",
+      "metodo": "POST",
+      "ruta": "/servicios",
+      "esperado": 403,
+      "obtenido": 403,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.1418719",
+        "status": 403,
+        "error": "Forbidden",
+        "mensaje": "No tiene permiso para realizar esta operación",
+        "ruta": "/api/v1/servicios"
+      }
+    },
+    {
+      "caso": "ASESOR no consulta reportes",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio",
+      "esperado": 403,
+      "obtenido": 403,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.1568791",
+        "status": 403,
+        "error": "Forbidden",
+        "mensaje": "No tiene permiso para realizar esta operación",
+        "ruta": "/api/v1/reportes/ingresos-por-servicio"
+      }
+    },
+    {
+      "caso": "ASESOR no anula",
+      "metodo": "PATCH",
+      "ruta": "/ordenes/1/anular",
+      "esperado": 403,
+      "obtenido": 403,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.171471",
+        "status": 403,
+        "error": "Forbidden",
+        "mensaje": "No tiene permiso para realizar esta operación",
+        "ruta": "/api/v1/ordenes/1/anular"
+      }
+    },
+    {
+      "caso": "JEFE no registra órdenes",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 403,
+      "obtenido": 403,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.187561",
+        "status": 403,
+        "error": "Forbidden",
+        "mensaje": "No tiene permiso para realizar esta operación",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "JEFE no crea vehículos",
+      "metodo": "POST",
+      "ruta": "/vehiculos",
+      "esperado": 403,
+      "obtenido": 403,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.1987085",
+        "status": 403,
+        "error": "Forbidden",
+        "mensaje": "No tiene permiso para realizar esta operación",
+        "ruta": "/api/v1/vehiculos"
+      }
+    },
+    {
+      "caso": "Clientes reales",
+      "metodo": "GET",
+      "ruta": "/clientes",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Servicios reales",
+      "metodo": "GET",
+      "ruta": "/servicios",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Vehículos y cliente",
+      "metodo": "GET",
+      "ruta": "/vehiculos",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Filtro cliente",
+      "metodo": "GET",
+      "ruta": "/vehiculos?clienteId=1",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Validación campos servicio",
+      "metodo": "POST",
+      "ruta": "/servicios",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.466237",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/servicios",
+        "campos": {
+          "codigo": "El código debe tener el formato SRV-001",
+          "duracionMin": "must be greater than or equal to 15",
+          "precio": "must be greater than 0",
+          "nombre": "size must be between 3 and 80"
+        }
+      }
+    },
+    {
+      "caso": "Servicio duplicado",
+      "metodo": "POST",
+      "ruta": "/servicios",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.4967738",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El código de servicio ya existe",
+        "ruta": "/api/v1/servicios"
+      }
+    },
+    {
+      "caso": "Servicio inexistente",
+      "metodo": "GET",
+      "ruta": "/servicios/999999999",
+      "esperado": 404,
+      "obtenido": 404,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.5158659",
+        "status": 404,
+        "error": "Not Found",
+        "mensaje": "Servicio no encontrado",
+        "ruta": "/api/v1/servicios/999999999"
+      }
+    },
+    {
+      "caso": "Crear servicio",
+      "metodo": "POST",
+      "ruta": "/servicios",
+      "esperado": 201,
+      "obtenido": 201,
+      "correcto": true
+    },
+    {
+      "caso": "Editar servicio conservando código propio",
+      "metodo": "PUT",
+      "ruta": "/servicios/31",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Baja de servicio",
+      "metodo": "PATCH",
+      "ruta": "/servicios/31/estado",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Eliminar servicio sin historial",
+      "metodo": "DELETE",
+      "ruta": "/servicios/31",
+      "esperado": 204,
+      "obtenido": 204,
+      "correcto": true
+    },
+    {
+      "caso": "Servicio eliminado inexistente",
+      "metodo": "GET",
+      "ruta": "/servicios/31",
+      "esperado": 404,
+      "obtenido": 404,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.7600658",
+        "status": 404,
+        "error": "Not Found",
+        "mensaje": "Servicio no encontrado",
+        "ruta": "/api/v1/servicios/31"
+      }
+    },
+    {
+      "caso": "Servicio con historial protegido",
+      "metodo": "DELETE",
+      "ruta": "/servicios/1",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.7784113",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El servicio tiene órdenes; use la baja de estado para conservar la historia",
+        "ruta": "/api/v1/servicios/1"
+      }
+    },
+    {
+      "caso": "Vehículo con historial protegido",
+      "metodo": "DELETE",
+      "ruta": "/vehiculos/1",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.8125372",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El vehículo tiene órdenes y no puede eliminarse",
+        "ruta": "/api/v1/vehiculos/1"
+      }
+    },
+    {
+      "caso": "Placa duplicada",
+      "metodo": "POST",
+      "ruta": "/vehiculos",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.850696",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "La placa ya existe",
+        "ruta": "/api/v1/vehiculos"
+      }
+    },
+    {
+      "caso": "Cliente inexistente",
+      "metodo": "POST",
+      "ruta": "/vehiculos",
+      "esperado": 404,
+      "obtenido": 404,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.8728945",
+        "status": 404,
+        "error": "Not Found",
+        "mensaje": "Cliente no encontrado",
+        "ruta": "/api/v1/vehiculos"
+      }
+    },
+    {
+      "caso": "Año y placa inválidos",
+      "metodo": "POST",
+      "ruta": "/vehiculos",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:31.8959399",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/vehiculos",
+        "campos": {
+          "anio": "must be greater than or equal to 1990",
+          "placa": "La placa debe tener el formato ABC-123"
+        }
+      }
+    },
+    {
+      "caso": "Crear vehículo",
+      "metodo": "POST",
+      "ruta": "/vehiculos",
+      "esperado": 201,
+      "obtenido": 201,
+      "correcto": true
+    },
+    {
+      "caso": "Editar vehículo conservando placa propia",
+      "metodo": "PUT",
+      "ruta": "/vehiculos/31",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Órdenes antes del rechazo",
+      "metodo": "GET",
+      "ruta": "/ordenes",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Tercer detalle inactivo",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.1480667",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El servicio SRV-008 está inactivo",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Órdenes después del rechazo",
+      "metodo": "GET",
+      "ruta": "/ordenes",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Servicios repetidos",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.2476313",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "No se puede repetir un servicio en la orden",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Cantidad mayor a cinco",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.2643279",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/ordenes",
+        "campos": {
+          "detalles[0].cantidad": "must be less than or equal to 5"
+        }
+      }
+    },
+    {
+      "caso": "Orden vacía",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.2760049",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/ordenes",
+        "campos": {
+          "detalles": "size must be between 1 and 10"
+        }
+      }
+    },
+    {
+      "caso": "Once detalles",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.2917191",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/ordenes",
+        "campos": {
+          "detalles": "size must be between 1 and 10"
+        }
+      }
+    },
+    {
+      "caso": "Servicio inexistente en orden",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 404,
+      "obtenido": 404,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.3204294",
+        "status": 404,
+        "error": "Not Found",
+        "mensaje": "Servicio no encontrado",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Kilometraje menor al histórico",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.3444655",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El kilometraje no puede ser menor al último registrado: 45000",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Total enviado por cliente rechazado",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.3623698",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Formato de datos o fecha inválido",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Reporte agregado inicial",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Registrar orden completa",
+      "metodo": "POST",
+      "ruta": "/ordenes",
+      "esperado": 201,
+      "obtenido": 201,
+      "correcto": true
+    },
+    {
+      "caso": "Consultar detalle",
+      "metodo": "GET",
+      "ruta": "/ordenes/7",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Reporte suma orden registrada",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Filtros combinados órdenes",
+      "metodo": "GET",
+      "ruta": "/ordenes?placa=QAT-100&estado=REGISTRADA&desde=2026-01-01&hasta=2027-12-31",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Fechas invertidas",
+      "metodo": "GET",
+      "ruta": "/ordenes?desde=2026-10-30&hasta=2026-10-01",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.5580927",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "La fecha desde no puede ser posterior a hasta",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Formato fecha incorrecto",
+      "metodo": "GET",
+      "ruta": "/ordenes?desde=no-fecha",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.5710048",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Formato de datos o fecha inválido",
+        "ruta": "/api/v1/ordenes"
+      }
+    },
+    {
+      "caso": "Anulación fuera del día",
+      "metodo": "PATCH",
+      "ruta": "/ordenes/1/anular",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.5977537",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "Solo se puede anular una orden el mismo día de su registro",
+        "ruta": "/api/v1/ordenes/1/anular"
+      }
+    },
+    {
+      "caso": "Motivo demasiado corto",
+      "metodo": "PATCH",
+      "ruta": "/ordenes/7/anular",
+      "esperado": 400,
+      "obtenido": 400,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.6091171",
+        "status": 400,
+        "error": "Bad Request",
+        "mensaje": "Datos inválidos",
+        "ruta": "/api/v1/ordenes/7/anular",
+        "campos": {
+          "motivo": "size must be between 10 and 200"
+        }
+      }
+    },
+    {
+      "caso": "Anular orden del día",
+      "metodo": "PATCH",
+      "ruta": "/ordenes/7/anular",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Segunda anulación rechazada",
+      "metodo": "PATCH",
+      "ruta": "/ordenes/7/anular",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.6646072",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "Solo se puede anular una orden REGISTRADA",
+        "ruta": "/api/v1/ordenes/7/anular"
+      }
+    },
+    {
+      "caso": "Reporte excluye anulada",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Reporte por rango sin resultados",
+      "metodo": "GET",
+      "ruta": "/reportes/ingresos-por-servicio?desde=1990-01-01&hasta=1990-01-02",
+      "esperado": 200,
+      "obtenido": 200,
+      "correcto": true
+    },
+    {
+      "caso": "Historial anulado también protegido",
+      "metodo": "DELETE",
+      "ruta": "/vehiculos/31",
+      "esperado": 409,
+      "obtenido": 409,
+      "correcto": true,
+      "error": {
+        "timestamp": "2026-10-29T10:37:32.711048",
+        "status": 409,
+        "error": "Conflict",
+        "mensaje": "El vehículo tiene órdenes y no puede eliminarse",
+        "ruta": "/api/v1/vehiculos/31"
+      }
+    },
+    {
+      "caso": "Rollback y totales comprobados mediante datos reales",
+      "correcto": true,
+      "ordenDePrueba": "OS-000007",
+      "estadoFinal": "ANULADA",
+      "placaConHistorialDePrueba": "QAT-100"
+    }
+  ]
+}

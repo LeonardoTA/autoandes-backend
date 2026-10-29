@@ -1,0 +1,38 @@
+{
+  "fecha": "2026-10-29T10:41:00.9397555-05:00",
+  "backend": [
+    {
+      "suite": "pe.edu.upeu.autoandes.CatalogoOracleTest",
+      "pruebas": 2,
+      "fallos": 0,
+      "errores": 0
+    },
+    {
+      "suite": "pe.edu.upeu.autoandes.JwtYPermisosTest",
+      "pruebas": 2,
+      "fallos": 0,
+      "errores": 0
+    },
+    {
+      "suite": "pe.edu.upeu.autoandes.OrdenOracleTest",
+      "pruebas": 4,
+      "fallos": 0,
+      "errores": 0
+    },
+    {
+      "suite": "pe.edu.upeu.autoandes.SeguridadOracleTest",
+      "pruebas": 5,
+      "fallos": 0,
+      "errores": 0
+    }
+  ],
+  "frontend": {
+    "fallos": 0,
+    "pruebas": 37,
+    "buildProduccion": "aprobado"
+  },
+  "api": {
+    "pruebas": 64,
+    "fallos": 0
+  }
+}
