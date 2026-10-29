@@ -1,0 +1,16 @@
+**/target/
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+**/.idea/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.local.ps1
+**/*.log
+**/test-results/
+**/playwright-report/
+.private/
+tooling/
+*.zip
