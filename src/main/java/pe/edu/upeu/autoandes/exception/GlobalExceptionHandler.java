@@ -28,6 +28,9 @@ public class GlobalExceptionHandler {
  ResponseEntity<ErrorResponseDTO> formato(Exception e,HttpServletRequest r) {return error(HttpStatus.BAD_REQUEST,"Formato de datos o fecha inválido",r,null);}
  @ExceptionHandler(DataIntegrityViolationException.class) ResponseEntity<ErrorResponseDTO> integridad(Exception e,HttpServletRequest r) {return error(HttpStatus.CONFLICT,"El registro está duplicado o mantiene referencias históricas",r,null);}
  @ExceptionHandler(org.springframework.web.servlet.resource.NoResourceFoundException.class) ResponseEntity<ErrorResponseDTO> inexistente(Exception e,HttpServletRequest r) {return error(HttpStatus.NOT_FOUND,"Ruta no encontrada",r,null);}
+ @ExceptionHandler(org.springframework.security.core.AuthenticationException.class) ResponseEntity<ErrorResponseDTO> autenticacion(Exception e,HttpServletRequest r) {return error(HttpStatus.UNAUTHORIZED,"Credenciales inválidas",r,null);}
+ @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class) ResponseEntity<ErrorResponseDTO> permiso(Exception e,HttpServletRequest r) {return error(HttpStatus.FORBIDDEN,"No tiene permiso para realizar esta operación",r,null);}
+ @ExceptionHandler(org.springframework.web.HttpRequestMethodNotSupportedException.class) ResponseEntity<ErrorResponseDTO> metodo(Exception e,HttpServletRequest r) {return error(HttpStatus.METHOD_NOT_ALLOWED,"Método no permitido",r,null);}
  @ExceptionHandler(Exception.class) ResponseEntity<ErrorResponseDTO> inesperado(Exception e,HttpServletRequest r) {
   log.error("Error inesperado en {} ({})",r.getRequestURI(),e.getClass().getSimpleName());
   return error(HttpStatus.INTERNAL_SERVER_ERROR,"Ocurrió un error inesperado",r,null);
